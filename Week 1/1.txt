@@ -1,24 +1,723 @@
 Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license()" for more information.
->>> 5 & 6
+5 & 6
 4
->>> 5|6
+5|6
 7
->>> 5 and 6
+5 and 6
 6
->>> 5|6
+5|6
 7
->>> 5 or 6
+5 or 6
 5
->>> not 6
+not 6
 False
->>> not -6
+not -6
 False
->>> not 0
+not 0
 True
->>> 5^6
+5^6
 3
->>> 4>6 & 7>8
+4>6 & 7>8
 False
->>> ! true
+! true
 SyntaxError: invalid syntax
+5<<3
+40
+5>>3
+0
+5<<4
+80
+>>2
+SyntaxError: invalid syntax
+5>>>4
+SyntaxError: invalid syntax
+6<<<5
+SyntaxError: invalid syntax
+num1=10
+type(num1)
+<class 'int'>
+num1 is int
+False
+type(num1) is int
+True
+type(5) is not str
+True
+print (num1)
+10
+print('hi')
+hi
+'hi'
+'hi'
+hi
+Traceback (most recent call last):
+  File "<pyshell#25>", line 1, in <module>
+    hi
+NameError: name 'hi' is not defined
+print(6)
+6
+print('6')
+6
+print('hi' +'hello')
+hihello
+print(5 + 6)
+11
+print('5'+'6')
+56
+print('5 + 6')
+5 + 6
+print(num1 +10)
+20
+print(num1 +'10')
+Traceback (most recent call last):
+  File "<pyshell#33>", line 1, in <module>
+    print(num1 +'10')
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+print('num1' + 10)
+Traceback (most recent call last):
+  File "<pyshell#34>", line 1, in <module>
+    print('num1' + 10)
+TypeError: can only concatenate str (not "int") to str
+print('sum:',num1+10)
+sum: 20
+print('sum:' + '\n', num1+10)
+sum:
+ 20
+input(10)
+10
+''
+input()
+13
+'13'
+input()
+'hi'
+"'hi'"
+input()
+hi
+'hi'
+input("hi")
+hi
+''
+input(hi)
+Traceback (most recent call last):
+  File "<pyshell#44>", line 1, in <module>
+    input(hi)
+NameError: name 'hi' is not defined
+input("enter a no:")
+enter a no:5
+'5'
+input('hi)
+      
+SyntaxError: unterminated string literal (detected at line 1)
+float(input(5))
+      
+5
+Traceback (most recent call last):
+  File "<pyshell#47>", line 1, in <module>
+    float(input(5))
+ValueError: could not convert string to float: ''
+float(input('enter a no'))
+      
+enter a no 7
+7.0
+bool(input(0))
+      
+0bool(input('enter a no'))
+True
+
+bool(input('enter a no:'))
+      
+enter a no:7
+True
+bool(input('enter a no:'))
+      
+enter a no:0
+True
+bool( int (input('enter a no:')))
+      
+enter a no:0
+False
+False
+      
+False
+bool(5)
+      
+True
+bool(int(6))
+      
+True
+"ram's house"
+      
+"ram's house"
+'rams's house'
+      
+SyntaxError: unterminated string literal (detected at line 1)
+str1='hello there!'
+      
+str1
+      
+'hello there!'
+len(str1)
+      
+12
+str1[6]
+      
+'t'
+str1[10]
+      
+'e'
+str1[6]
+      
+'t'
+str1[7]
+      
+'h'
+str1[5]
+      
+' '
+str1[-1]
+      
+'!'
+str1[-5]
+      
+'h'
+str1[h]
+      
+Traceback (most recent call last):
+  File "<pyshell#69>", line 1, in <module>
+    str1[h]
+NameError: name 'h' is not defined
+index(h)
+      
+Traceback (most recent call last):
+  File "<pyshell#70>", line 1, in <module>
+    index(h)
+NameError: name 'index' is not defined
+str1[0:3]
+      
+'hel'
+str1[-1:-3]
+      
+''
+str1[12:10]
+      
+''
+str1[5]
+      
+' '
+str1[5:]
+      
+' there!'
+str1[:5]
+      
+'hello'
+str1[0:12:1]
+      
+'hello there!'
+str1[0:10:3]
+      
+'hltr'
+str1[0::4]
+      
+'hoe'
+str1[::7]
+      
+'hh'
+
+str1[3::]
+      
+'lo there!'
+str1[-3:-1]
+      
+'re'
+str1[-10:-1:2]
+      
+'lotee'
+str1.capitalize()
+      
+'Hello there!'
+str1.upper()
+      
+'HELLO THERE!'
+str1.lower()
+      
+'hello there!'
+str1.count()
+      
+Traceback (most recent call last):
+  File "<pyshell#87>", line 1, in <module>
+    str1.count()
+TypeError: count expected at least 1 argument, got 0
+str1.count('h')
+      
+2
+str1.endswith()
+      
+Traceback (most recent call last):
+  File "<pyshell#89>", line 1, in <module>
+    str1.endswith()
+TypeError: endswith expected at least 1 argument, got 0
+str1.endswith('h')
+      
+False
+str1.endswith('!')
+      
+True
+str1.startswith('h')
+      
+True
+str1.find('t')
+      
+6
+str1.find('-s')
+      
+-1
+str1.index()
+      
+Traceback (most recent call last):
+  File "<pyshell#95>", line 1, in <module>
+    str1.index()
+TypeError: index expected at least 1 argument, got 0
+str1.encode()
+      
+b'hello there!'
+str1.encode()
+      
+b'hello there!'
+str1.encode
+      
+<built-in method encode of str object at 0x0000024A15FB2B70>
+print(ord('A'))
+      
+65
+print(ord('a'))
+      
+97
+print(char(12))
+      
+Traceback (most recent call last):
+  File "<pyshell#101>", line 1, in <module>
+    print(char(12))
+NameError: name 'char' is not defined. Did you mean: 'chr'?
+print(chr(12))
+      
+
+
+
+print(chr(12))
+      
+
+
+print(chr(48))
+      
+0
+print(chr('48'))
+      
+Traceback (most recent call last):
+  File "<pyshell#106>", line 1, in <module>
+    print(chr('48'))
+TypeError: 'str' object cannot be interpreted as an integer
+str1.encode('utf-8')
+      
+b'hello there!'
+str1.encode('utf-16')
+      
+b'\xff\xfeh\x00e\x00l\x00l\x00o\x00 \x00t\x00h\x00e\x00r\x00e\x00!\x00'
+str1.isalpha()
+      
+False
+str1.isstring()
+      
+Traceback (most recent call last):
+  File "<pyshell#110>", line 1, in <module>
+    str1.isstring()
+AttributeError: 'str' object has no attribute 'isstring'
+str1.replace('h','H')
+      
+'Hello tHere!'
+str1.split()
+      
+['hello', 'there!']
+str1.split('l')
+      
+['he', '', 'o there!']
+str2='10/5/25'
+      
+str2.split('/')
+      
+['10', '5', '25']
+str1.join(str2)
+      
+'1hello there!0hello there!/hello there!5hello there!/hello there!2hello there!5'
+str1.strip()
+      
+'hello there!'
+str3='hi hello "
+      
+SyntaxError: unterminated string literal (detected at line 1)
+str3='hi hello '
+      
+str3.strip()
+      
+'hi hello'
+str4='  hi hi   '
+      
+str4.strip()
+      
+'hi hi'
+str4.count()
+      
+Traceback (most recent call last):
+  File "<pyshell#123>", line 1, in <module>
+    str4.count()
+TypeError: count expected at least 1 argument, got 0
+str4.len()
+      
+Traceback (most recent call last):
+  File "<pyshell#124>", line 1, in <module>
+    str4.len()
+AttributeError: 'str' object has no attribute 'len'
+len(str4)
+      
+10
+len(str4.strip())
+      
+5
+str5='hi'
+      
+id(str5)
+      
+140719574790016
+str5='hello'
+      
+id(str5)
+      
+2517182918848
+numbers=[10,20,30]
+      
+numbers
+      
+[10, 20, 30]
+id(numers)
+      
+Traceback (most recent call last):
+  File "<pyshell#133>", line 1, in <module>
+    id(numers)
+NameError: name 'numers' is not defined. Did you mean: 'numbers'?
+id(numbers)
+      
+2517213185152
+numbers.append(40)
+      
+numbers
+      
+[10, 20, 30, 40]
+id(numbers)
+      
+2517213185152
+2517213185152
+      
+2517213185152
+numbers[2]
+      
+30
+numbers[3]=35
+      
+numbers
+      
+[10, 20, 30, 35]
+numbers.count(30)
+      
+1
+numbers.append9=(40,40)
+      
+Traceback (most recent call last):
+  File "<pyshell#143>", line 1, in <module>
+    numbers.append9=(40,40)
+AttributeError: 'list' object has no attribute 'append9' and no __dict__ for setting new attributes. Did you mean: 'append'?
+numbers.append(40,40)
+      
+Traceback (most recent call last):
+  File "<pyshell#144>", line 1, in <module>
+    numbers.append(40,40)
+TypeError: list.append() takes exactly one argument (2 given)
+numbers.append(40)
+      
+numbers.append(10)
+      
+numbers
+      
+[10, 20, 30, 35, 40, 10]
+numbers.count(10)
+      
+2
+numbers.index(10)
+      
+0
+numbers.insert(50,60)
+      
+
+numbers
+      
+[10, 20, 30, 35, 40, 10, 60]
+numbers.pop(10)
+      
+Traceback (most recent call last):
+  File "<pyshell#153>", line 1, in <module>
+    numbers.pop(10)
+IndexError: pop index out of range
+numbers.remove(10)
+      
+numbers
+      
+[20, 30, 35, 40, 10, 60]
+numbers.remove(70)
+      
+Traceback (most recent call last):
+  File "<pyshell#156>", line 1, in <module>
+    numbers.remove(70)
+ValueError: list.remove(x): x not in list
+numbers.pop()
+      
+60
+numbers.pop(3)
+      
+40
+numbers
+      
+[20, 30, 35, 10]
+numbers.pop(-2)
+      
+35
+numbers.pop(-10)
+      
+Traceback (most recent call last):
+  File "<pyshell#161>", line 1, in <module>
+    numbers.pop(-10)
+IndexError: pop index out of range
+numbers.reverse()
+      
+numbers
+      
+[10, 30, 20]
+numbers.sort()
+      
+numbers
+      
+[10, 20, 30]
+numbers.sort(reverse=true)
+      
+Traceback (most recent call last):
+  File "<pyshell#166>", line 1, in <module>
+    numbers.sort(reverse=true)
+NameError: name 'true' is not defined. Did you mean: 'True'?
+numbers.sort(reverse=True)
+      
+numbers
+      
+[30, 20, 10]
+
+nums=numbers.copy()
+      
+nums
+      
+[30, 20, 10]
+id(nums1)
+      
+Traceback (most recent call last):
+  File "<pyshell#172>", line 1, in <module>
+    id(nums1)
+NameError: name 'nums1' is not defined. Did you mean: 'num1'?
+id(nums)
+      
+2517219622272
+id(numbers)
+      
+2517213185152
+nums=numbers
+      
+id(nums)
+      
+2517213185152
+numbers.extend(nums)
+      
+numbers
+      
+[30, 20, 10, 30, 20, 10]
+numbers.clear()
+      
+numbers
+      
+[]
+del(numbers)
+      
+numbers
+      
+Traceback (most recent call last):
+  File "<pyshell#183>", line 1, in <module>
+    numbers
+NameError: name 'numbers' is not defined. Did you forget to import 'numbers'?
+tup1=(10,20,30)
+      
+tup1
+      
+(10, 20, 30)
+tup1(5)
+      
+Traceback (most recent call last):
+  File "<pyshell#186>", line 1, in <module>
+    tup1(5)
+TypeError: 'tuple' object is not callable
+tup1(2)
+      
+Traceback (most recent call last):
+  File "<pyshell#187>", line 1, in <module>
+    tup1(2)
+TypeError: 'tuple' object is not callable
+tup1[2]
+      
+30
+tup1.index(1)
+      
+Traceback (most recent call last):
+  File "<pyshell#189>", line 1, in <module>
+    tup1.index(1)
+ValueError: tuple.index(x): x not in tuple
+tup1.index[1]
+      
+Traceback (most recent call last):
+  File "<pyshell#190>", line 1, in <module>
+    tup1.index[1]
+TypeError: 'builtin_function_or_method' object is not subscriptable
+tup1.count[10]
+      
+Traceback (most recent call last):
+  File "<pyshell#191>", line 1, in <module>
+    tup1.count[10]
+TypeError: 'builtin_function_or_method' object is not subscriptable
+tup1.count(10)
+      
+1
+tup1.index(20)
+      
+1
+set1={22,11,33,55,9,7}
+      
+set1
+      
+{33, 55, 22, 7, 9, 11}
+set1.add(43)
+      
+set1
+      
+{33, 55, 22, 7, 9, 11, 43}
+set2={5,8,78,9,6}
+      
+set2
+      
+{5, 6, 8, 9, 78}
+set1set1.union(set2)
+      
+Traceback (most recent call last):
+  File "<pyshell#200>", line 1, in <module>
+    set1set1.union(set2)
+NameError: name 'set1set1' is not defined
+set1.union(set2)
+      
+{33, 5, 6, 7, 8, 9, 11, 43, 78, 22, 55}
+set3=set1.union(set2)
+      
+set3
+      
+{33, 5, 6, 7, 8, 9, 11, 43, 78, 22, 55}
+set4=set3.intersection(set2)
+      
+set4
+      
+{5, 6, 8, 9, 78}
+set5=set1.difference(set4)
+      
+set5
+      
+{33, 7, 11, 43, 22, 55}
+set1.discard(22)
+      
+set1
+      
+{33, 55, 7, 9, 11, 43}
+dict1{1:10,2:20,3:30}
+      
+SyntaxError: invalid syntax
+dict1={1:10,2:20,3:30}
+      
+dict1
+      
+{1: 10, 2: 20, 3: 30}
+dict1[2]=200
+      
+dict1
+      
+{1: 10, 2: 200, 3: 30}
+dict2={'rollno':'123','name':'anu'}
+      
+dict2
+      
+{'rollno': '123', 'name': 'anu'}
+dict2['rno']
+      
+Traceback (most recent call last):
+  File "<pyshell#217>", line 1, in <module>
+    dict2['rno']
+KeyError: 'rno'
+dict2['rollno']
+      
+'123'
+dict2['ph': '97354765454']
+      
+Traceback (most recent call last):
+  File "<pyshell#219>", line 1, in <module>
+    dict2['ph': '97354765454']
+KeyError: slice('ph', '97354765454', None)
+dict2['ph']=9358634985
+      
+dict2
+      
+{'rollno': '123', 'name': 'anu', 'ph': 9358634985}
+dict2.get('ph')
+      
+9358634985
+ph=dict1.get('ph')
+      
+dict2.keys()
+      
+dict_keys(['rollno', 'name', 'ph'])
+dict1_keys()
+      
+Traceback (most recent call last):
+  File "<pyshell#225>", line 1, in <module>
+>>>     dict1_keys()
+... NameError: name 'dict1_keys' is not defined
+dict1.keys()
+>>>       
+... dict_keys([1, 2, 3])
+dict2.values()
+>>>       
+... dict_values(['123', 'anu', 9358634985])
+dict2.pop(2)
+      
+Traceback (most recent call last):
+  File "<pyshell#229>", line 1, in <module>
+>>>     dict2.pop(2)
+... KeyError: 2
+dict1.pop(2)
+>>>       
+... 200
+dict1
+>>>       
+... {1: 10, 3: 30}
+>>> dict1.clear()
+...       
+dict1
+>>>       
+... {}
+dict1.del()
