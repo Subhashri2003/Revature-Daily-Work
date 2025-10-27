@@ -1,8 +1,11 @@
-'''
+"""
 Date:25/10/2025
 Author:Subhashri
 Description:Prog to find biggest of 2 nos
-'''
+"""
+
+
+
 
 num1=int(input('Enter a number: '))
 num2=int(input('Enter another number: '))

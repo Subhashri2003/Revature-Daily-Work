@@ -1,3 +1,6 @@
+"""
+Date:27/10/2025
+"""
 print("Hello World !")
 
 num1=int(input("Enter a number: "))
