@@ -1,8 +1,13 @@
-from StudDetails import StudentDetails
-class StudExCurr(StudentDetails):
-        def __init__(self,ccode,name,roll_no,m1,m2,m3,cname,exam1,exam2):
-            super().__init__(self,ccode,name,roll_no,m1,m2,m3,cname)
-            self.exam1=exam1
-            self.exam2=exam2
-        def calc_extot(self):
-            return self.exam1+self.exam2
+#from StudDetails import StudentDetail
+#from oop.StudentGrade import ccode
+
+from StudDetails import StudentDetail
+
+class StudExCurr(StudentDetail):
+    def __init__(self,ccode,cname,rollno,sname,m1,m2,m3,exm1,exm2):
+        StudentDetail.__init__(self,ccode,cname,rollno,sname,m1,m2,m3)
+        self.exm1 = exm1
+        self.exm2 = exm2
+
+    def calc_extot(self):
+        return self.exm1 + self.exm2
