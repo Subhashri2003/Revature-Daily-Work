@@ -1,0 +1,37 @@
+CREATE or replace TABLE Ecommerce_data.final_orders 
+AS 
+SELECT order_id,
+customer_id,
+product_id,
+order_date,
+quantity,total_amount,
+round(total_amount/quantity,2) as avg_price_per_item
+from Ecommerce_data.orders;
+
+select * from Ecommerce_data.final_orders;
+
+Create or replace  table Ecommerce_data.city_revenue as 
+select c.city,
+sum(o.total_amount) as total_revenue,
+count(distinct o.order_id) as total_orders
+from Ecommerce_data.final_orders o 
+join Ecommerce_data.final_customers c
+on o.customer_id = c.customer_id
+ group by c.city
+ order by total_revenue desc;
+
+ select * from Ecommerce_data.city_revenue;
+
+
+CREATE OR REPLACE TABLE Ecommerce_data.top_products as 
+select
+p.name as product_name,
+p.category,
+sum(o.total_amount) as total_sales
+from Ecommerce_data.orders o
+join Ecommerce_data.products p
+on o.product_id = p.product_id
+group by product_name,category
+order by total_sales desc;
+
+select * from Ecommerce_data.top_products;

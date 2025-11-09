@@ -1,0 +1,81 @@
+select c.customer_id,
+c.name as customer_name,
+o.order_id,
+o.order_date,
+o.total_amount,
+from sales_data.customers as c
+inner join sales_data.orders as o
+on c.customer_id=o.customer_id;
+
+select 
+c.customer_id,
+c.name as customer_name,
+o.order_id,
+o.order_date,
+o.total_amount,
+from sales_data.customers as c
+left join sales_data.orders as o
+on c.customer_id=o.customer_id;
+
+select
+c.customer_id,
+c.name as customer_name,
+o.order_id,
+o.order_date,
+o.total_amount,
+from sales_data.customers as c
+full outer join sales_data.orders as o 
+on c.customer_id=o.customer_id;
+
+select
+o.order_id,
+p.name as product_name,
+p.category,
+o.quantity,
+o.total_amount
+from sales_data.orders as o
+join sales_dataset.products as p
+on o.product_id=p.product_id
+where p.category='Electronics';
+
+create or replace table `prismatic-smoke-47750.sales_data.customer_orders` as 
+select c.customer_id,
+c.name,
+c.city,
+o.order_id,
+o.order_date,
+o.total_amount,
+from `prismatic-smoke-47750.sales_data.customers` c
+left join `prismatic-smoke-47750.sales_data.orders` on
+c.customer_id=o.customer_id;
+
+create or replace table sales_data.sales_flattened as 
+select
+o.order_id,
+o.order_date,
+o.quantity,
+o.total_amount,
+c.customer_id,
+c.name as customer_name,
+c.city,
+p.product_id,
+p.name as product_name,
+p.category,
+,p.price
+from `sales_data.orders` as o 
+ `sales_data.customers` as c on o.customer_id=c.customer_id`sales_data.customers`
+ join `sales_data.products` as p on o.product_id=p.product_id;
+
+ select * from sales_data.sales_flattened;
+
+ create or replace table sales_data.orders_nested as 
+ select
+ o.order_id,
+ o.order_date,
+ c.customer_id,
+ c.name as customer_name,
+ array_agg(struct(p.product_id,p.name as product_name,p.category,o.quantity,o.total_amount))as items
+ from `sales_data.orders` as o
+join `sales_data.customers` as c on o.customer_id=c.customer_id
+join `sales_data.products` as p on o.product_id=p.product_id
+group by o.order_id,o.order_date,c.customer_id,c.name;
